@@ -4,6 +4,7 @@ export const getCars = async () => {
     return await db
     .selectFrom('inventory')
     .selectAll()
+    .orderBy('created_at', 'desc')
     .execute();
 };
 
